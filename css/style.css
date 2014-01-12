@@ -7,7 +7,7 @@
 
 html{
 	/* This image will be displayed fullscreen */
-	background:url('../img/taw.jpg') no-repeat center center;
+	/*background:url('../img/taw.jpg') no-repeat center center;
 	/*background:url('../img/bg.png') no-repeat center center;*/
 	
 	/* Ensure the html element always takes up the full height of the browser window */
