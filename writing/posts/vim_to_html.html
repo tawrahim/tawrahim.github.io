@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Tawheed Raheem | Writing</title>
+    <meta name="author" content="Dotan Nahum">
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+    href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link href="/favicon.png?v=2" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="/javascripts/modernizr-2.0.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7131053-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+</script>
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #d0d0d0; background-color: #121212; }
+* { font-size: 1em; }
+.String { color: #afaf87; }
+.Function { color: #87ff00; }
+.Boolean { color: #af5fff; }
+.Conditional { color: #d7005f; font-weight: bold; }
+.Statement { color: #d7005f; font-weight: bold; }
+.Identifier { color: #ff8700; }
+.Keyword { color: #d7005f; font-weight: bold; }
+-->
+</style>
+
+</head>
+
+<body>
+    <div id="home">
+        <a href="../index.html"><img src="../images/home.png" alt="" /></a>
+    </div>
+    <div id="container">
+        <div id="content">
+            <div class="blog-index">
+
+                <article>
+                <div class="post contain">
+                    <h1 class="entry-title"><a href="vim_to_html.html">Vim :TOhtml</a></h1>
+                    <div class="entry-content">
+                        <p>
+                            Some rants and more rants to come .....
+                        </p>
+                    </div>
+                </div>
+                        <pre id='vimCodeElement'>
+                        <span class="String">&quot;use strict&quot;</span>;
+
+                        <span class="Identifier">var</span> Todo = Backbone.Model.extend(<span class="Function">{</span>
+                            defaults: <span class="Function">{</span>
+                                title: <span class="String">''</span>,
+                                abu: <span class="String">''</span>,
+                                completed: <span class="Boolean">false</span>
+                            <span class="Function">}</span>,
+
+                            validate: <span class="Function">function</span>(attribs)<span class="Function">{</span>
+                                <span class="Conditional">if</span> (attribs.tittle === <span class="Keyword">undefined</span>)<span class="Function">{</span>
+                                    <span class="Statement">return</span> <span class="String">&quot;Remeber to set your todo&quot;</span>;
+                                <span class="Function">}</span>
+                            <span class="Function">}</span>,
+
+                            initialize: <span class="Function">function</span>() <span class="Function">{</span>
+                                console.log(<span class="String">'This model has been initailized'</span>);
+                                <span class="Identifier">this</span>.on(<span class="String">'change:title'</span>, <span class="Function">function</span>()<span class="Function">{</span>
+                                    console.log(<span class="String">'-Values for this model has changed'</span>);
+                                <span class="Function">}</span>),
+
+                                <span class="Identifier">this</span>.on(<span class="String">'invalid'</span>, <span class="Function">function</span>(model, error) <span class="Function">{</span>
+                                    console.log(error);
+                                <span class="Function">}</span>);
+                            <span class="Function">}</span>
+                        <span class="Function">}</span>);
+                        </pre>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
