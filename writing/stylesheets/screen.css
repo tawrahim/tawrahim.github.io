@@ -1600,3 +1600,6 @@ article .highlight table td, div#content .highlight table td {
 .date {
     text-align: center;
 }
+#vimCodeElement {
+    border-radius:25px;
+}
